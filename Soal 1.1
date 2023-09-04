@@ -1,0 +1,20 @@
+def cari_kpk(a, b):
+    # mencari bilangan terbesar antara a dan b
+    if a > b:
+        maks = a
+    else:
+        maks = b
+    
+    # loop untuk mencari kelipatan terkecil dari maks
+    while True:
+        if maks % a == 0 and maks % b == 0:
+            kpk = maks
+            break
+        maks += 1
+    
+    return kpk
+
+a = 3
+b = 4
+kpk = cari_kpk(a, b)
+print("KPK dari", a, "dan", b, "yaitu", kpk)
